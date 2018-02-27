@@ -25,3 +25,49 @@ users = User.create([
     phone: '6643451234'
   }
 ])
+
+
+shifts = Shift.create([
+  {
+    manager_id: 3,
+    employee_id: 1,
+    break: 30.0,
+    start_time: DateTime.new(2018,3,1,8,30),
+    end_time: DateTime.new(2018,3,1,14),
+  },
+  {
+    manager_id: 3,
+    employee_id: 1,
+    break: 30.0,
+    start_time: DateTime.new(2018,3,2,8,30),
+    end_time: DateTime.new(2018,3,2,14),
+  },
+  {
+    manager_id: 3,
+    employee_id: 2,
+    break: 30.0,
+    start_time: DateTime.new(2018,3,1,9,30),
+    end_time: DateTime.new(2018,3,1,15),
+  },
+  {
+    manager_id: 3,
+    employee_id: 2,
+    break: 30.0,
+    start_time: DateTime.new(2018,3,2,9,30),
+    end_time: DateTime.new(2018,3,2,15),
+  },
+  {
+    manager_id: 3,
+    employee_id: 2,
+    break: 30.0,
+    start_time: DateTime.new(2018,3,1,9,30),
+    end_time: DateTime.new(2018,3,1,15),
+  },
+  {
+    manager_id: 3,
+    employee_id: 2,
+    break: 30.0,
+    start_time: DateTime.new(2018,3,3,8,30),
+    end_time: DateTime.new(2018,3,3,15),
+  },
+])
