@@ -23,10 +23,59 @@ Next, clone repo:<br>
 
 Then `cd` into project directory and run `rails db:seed` to seed the database with some sample data.
 
+To run tests run the command `rails test`.
+
 Finally, run `rails s` as this will start the rails server and is available at the URL `localhost:3000`.
 
-To run tests run the command `rails test`. 
+To test the endpoints you can run them directly in your browser, using `curl` or use a tool like [HTTPie](https://httpie.org/) which I tend to prefer. Once it's installed it's as easy as running this in your command line:
 
+```bash
+$ http GET :3000/users
+```
+... which would return a response like this:
+```bash
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/json; charset=utf-8
+ETag: W/"a5ad5232a30c31d9eab8fe50e603343b"
+Transfer-Encoding: chunked
+Vary: Origin
+X-Request-Id: 195039fe-8be6-4e0a-9686-0cc11ffcae7b
+X-Runtime: 0.004392
+
+{
+    "status": 200,
+    "users": [
+        {
+            "created_at": "2018-02-27T02:16:06.215Z",
+            "email": "bob.smith@example.com",
+            "id": 1,
+            "name": "Bob Smith",
+            "phone": "1235552943",
+            "role": "employee",
+            "updated_at": "2018-02-27T02:16:06.215Z"
+        },
+        {
+            "created_at": "2018-02-27T02:16:06.218Z",
+            "email": "lisa.simpson@example.com",
+            "id": 2,
+            "name": "Lisa Simpson",
+            "phone": "3215552862",
+            "role": "employee",
+            "updated_at": "2018-02-27T02:16:06.218Z"
+        },
+        {
+            "created_at": "2018-02-27T02:16:06.221Z",
+            "email": "yassin.omar@example.com",
+            "id": 3,
+            "name": "Yassin Omar",
+            "phone": "6643451234",
+            "role": "manager",
+            "updated_at": "2018-02-27T02:16:06.221Z"
+        }
+    ]
+}
+```
 ----------------------
 ## HTTP Routes
 
